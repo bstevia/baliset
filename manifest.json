@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Baliset",
+  "version": "1.0.0",
+  "description": "Renders heatmaps from guitar tabs",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "baliset@local",
+      "strict_min_version": "109.0"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://tabs.ultimate-guitar.com/*",
+        "https://www.ultimate-guitar.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["overlay.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": ["activeTab"]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "baliset-heatmap",
+  "version": "1.0.0",
+  "description": "Extension that renders heatmaps from guitar tabs",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "package": "npm run build && zip -r guitar_tab_heatmap.xpi manifest.json content.js overlay.css"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
